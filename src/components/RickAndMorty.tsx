@@ -7,6 +7,9 @@ const CharactersGrid = styled.div`
     gap: 20px;
     padding: 20px;
     width: 100%;
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 100%;
+    }
 `;
 
 const CharacterCard = styled.div<{ status: string }>`
@@ -22,6 +25,8 @@ const CharacterImage = styled.img`
     border-radius: 10px;
     margin-bottom: 10px;
 `;
+
+
 export default function RickAndMorty({ data }: { data: Character[] }) {
     return (
         <CharactersGrid>
